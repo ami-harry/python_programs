@@ -18,6 +18,8 @@ print("The original array is \n", array_2D)
 # print()
 
 # taking input using while loop
+
+
 print("Enter ", (row_size*col_size), " elements for the array ")
 row_ele = 0
 while row_ele in range(len(array_2D)):
