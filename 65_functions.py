@@ -98,4 +98,3 @@ def float_add(x):
 # calling the function with floatig number
 # float_add(34.2345)
 
-
