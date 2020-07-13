@@ -87,4 +87,15 @@ def ur_name():
 
 
 # calling the function
-ur_name()
+# ur_name()
+
+
+# printing the sum of floating number
+def float_add(x):
+    print(x+20.45)
+    print(f"{x+20.45:5.2f}")
+
+# calling the function with floatig number
+# float_add(34.2345)
+
+
