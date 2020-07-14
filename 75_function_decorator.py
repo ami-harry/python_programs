@@ -187,6 +187,7 @@ print(usr_name())
 '''
 
 
+'''
 # using single function name for actual and formal argument and storing the reurned function variable then printing the output by calling the same variable. //doing everything using a single function
 
 
@@ -206,3 +207,69 @@ def usr_name():
 
 usr_name = name(usr_name)
 print(usr_name())
+'''
+
+'''
+
+# appling the effect on 2 fuctions.. we can decorate as many functions as we want. but we are seeing here on 2 functions
+
+
+def der1(num):
+    def inner():
+        usr_input = int(input("Enter the number: "))
+        multi = usr_input*num()
+        print('the multiplication is', multi)
+        return multi
+    return inner
+
+
+def der2(num):
+    def inner():
+        user_inp = int(input("Enter how much you want to add : "))
+        add = user_inp+num()
+        print('the addition is', add)
+        return add
+    return inner
+
+
+def num():
+    original_digit = int(input("Enter the numbe to multiply with: "))
+    return original_digit
+
+
+# num = der1(der2(num))  --> this way firstly der1 input-->der2 input-then num input--> the addition will be printed, the miltilpcation will be done with updated value of num(as the user inputs the orignal and the addition value). total value will be multiplied with the no entered in der1
+num = der2(der1(num)) #--> firstly der2 input-->der1 inout--> then num input--> then the multiplcation will be printed and then the addition will be done in the multiplied value becuase it is returned as updated value of num. 
+print(num())
+'''
+
+
+# doing the same with @fun_name method
+
+def der1(num):
+    def inner():
+        usr_input = int(input("Enter the number: "))
+        multi = usr_input*num()
+        print('the multiplication is', multi)
+        return multi
+    return inner
+
+
+def der2(num):
+    def inner():
+        user_inp = int(input("Enter how much you want to add : "))
+        add = user_inp+num()
+        print('the addition is', add)
+        return add
+    return inner
+
+
+# @der2
+# @der1
+@der1
+@der2
+def num():
+    original_digit = int(input("Enter the numbe to multiply with: "))
+    return original_digit
+
+
+num()
