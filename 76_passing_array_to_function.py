@@ -17,6 +17,8 @@ arr_show(my_array)  # passing the array as actual argument at function call
 
 '''
 
+
+'''
 # passing array elemets to the function as per user input
 
 from array import *
@@ -67,3 +69,5 @@ while data in range(size_array):
 
 # passing the  array to the function as actual paramter
 my_fun(my_array)
+
+'''
