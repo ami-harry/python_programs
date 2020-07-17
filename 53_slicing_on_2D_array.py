@@ -23,7 +23,7 @@ while row_ele in range(len(array_2d)):
         array_2d[row_ele][col_ele] = inp_data
         col_ele += 1
     row_ele += 1
-print()
+print() 
 
 print("The updated array is\n", array_2d)
 

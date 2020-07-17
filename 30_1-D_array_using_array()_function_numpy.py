@@ -23,7 +23,7 @@
 # we can update their values too by index no
 
 
-"""
+
 import numpy
 
 arr=numpy.array([10,20,40,59,54])
@@ -89,7 +89,7 @@ print("after updating values")
 print(arr)
 print("this is 1-D array using array() function of numpy")
 print("thanks")
-"""
+
 
 """
 
