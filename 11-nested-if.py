@@ -11,20 +11,19 @@
 #
 
 
-# a = int(input("Enter vallue for a:"))
-# b = int(input("Enter vallue for b:"))
-# c = int(input("Enter vallue for c:"))
-# d = int(input("Enter vallue for d:"))
-# e = int(input("Enter vallue for e:"))
-# 
-# if ((a > b) and (a > c) and (a > d) and (a > e)):
-    # print(a, "is greater than", b, c, d, e)
-# elif ((b > a) and (b > c) and (b > d) and (b > e)):
-    # print(b, "is greater than", a, c, d, e,)
-# elif ((c > a) and (c > b) and (c > d) and (c > e)):
-    # print(c, "is greater than", a, b, d, e)
-# elif((d > a) and (d > b) and (d > c) and (d > e)):
-    # print(d, "is greater than ", a, b, c, e)
-# elif ((e > a) and (e > b) and (e > c) and (e > d)):
-    # print(e, "is greater", a, b, c, d)
-# 
+a = int(input("Enter vallue for a:"))
+b = int(input("Enter vallue for b:"))
+c = int(input("Enter vallue for c:"))
+d = int(input("Enter vallue for d:"))
+e = int(input("Enter vallue for e:"))
+
+if ((a > b) and (a > c) and (a > d) and (a > e)):
+    print(a, "is greater than", b, c, d, e)
+elif ((b > a) and (b > c) and (b > d) and (b > e)):
+    print(b, "is greater than", a, c, d, e,)
+elif ((c > a) and (c > b) and (c > d) and (c > e)):
+    print(c, "is greater than", a, b, d, e)
+elif((d > a) and (d > b) and (d > c) and (d > e)):
+    print(d, "is greater than ", a, b, c, e)
+elif ((e > a) and (e > b) and (e > c) and (e > d)):
+    print(e, "is greater", a, b, c, d)
