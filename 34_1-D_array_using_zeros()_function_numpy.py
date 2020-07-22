@@ -8,10 +8,8 @@
 # dtype--> the desored data type for the array. bydefault it is float
 # order --> whether to store multidimensional data in row-major (C style) or column-major(forton style) order in memory. it can be C or F. bydefault it is C
 
+
 """
-
-
-
 import numpy as hk
 arr = hk.zeros(5)
 # this will give 0.0 for 5 times. becuase bydefault it is float

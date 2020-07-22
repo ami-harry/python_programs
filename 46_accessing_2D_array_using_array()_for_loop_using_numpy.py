@@ -13,8 +13,8 @@ my_array = shalini.array([[10, 20, 30, 40],
                           [1, 2, 3, 4]])
 
 
-"""
 print("the original array is \n", my_array)
+"""
 # this will print the original array
 print()
 # this will print the data of 0th row
