@@ -102,3 +102,24 @@ phone.show_model('nokia')
 # while making the object we have  not passed one argument for the price_1--> it has been taken its default value. if we give its value at actual argument then the default value will be replaced and the new value will be printed on the screen.
 
 '''
+
+
+# creating 2 objects and checking that constructor is calling for both or not
+
+class Mobile:
+    def __init__(self, model_1, price_1=20000):
+        print("Constructor is called here")
+        self.model = model_1
+        self.price = price_1
+
+    def show_model(self, com):
+        company = com
+        print("model:", self.model, "Price:", self.price, "company:", com)
+
+
+phone = Mobile('nokia 6.1+')  # createated object
+phone.show_model('nokia')
+print()
+
+laptop = Mobile('hp pavillian x360')  # createated object
+laptop.show_model('hp')
