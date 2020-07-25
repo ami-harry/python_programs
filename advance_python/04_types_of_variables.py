@@ -39,4 +39,19 @@ nokia.show_model()
 
 '''
 
+'''
 
+# outside class:
+class Mobile:
+    def __init__(self):
+        self.model = 'nokia 6.1+'  # instance variable
+
+    def show_model(self):  # instance method
+        print(self.model)  # accessing the instance variable
+
+
+nokia = Mobile()
+# accessing the instance variable from outiside the class. here we can print and modify
+nokia.show_model()
+
+'''
