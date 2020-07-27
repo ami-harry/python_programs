@@ -34,3 +34,33 @@ print("The addition is ", add)
 print("The substraction is ", c.sub(10, 5))
 
 '''
+
+'''
+
+# this is from module_name import var_name.., fun_name1, fun_name 2 as alias_name type
+
+
+from cal import name as nm, add as sum, sub as diff, square
+
+nm() # this will print the name method
+
+s=sum(10,20) # this will add the numbers
+print("the sum is ",s)
+print("the substraction is ",diff(10,5))
+print("The square is ",square(10))
+'''
+
+'''
+
+# this is from module_name import *
+#  (*) means all
+
+from cal import *
+
+print(var)
+name()
+print("the addition is ",add(23,23))
+print("the substraction is ",sub(123,23))
+s=square(5)
+print("The square is",s)
+'''
