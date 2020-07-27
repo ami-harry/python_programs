@@ -25,6 +25,7 @@ obj.sum()
 '''
 
 
+
 class Myclass:
     def sum(self, a=None, b=None, c=None):
         if a != None and b != None and c != None:
@@ -35,5 +36,7 @@ class Myclass:
             print('enter atleaast 2 parameter')
 
 
+
 obj = Myclass()
 obj.sum(3)
+
