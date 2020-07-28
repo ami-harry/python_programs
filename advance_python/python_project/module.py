@@ -53,7 +53,7 @@
 # method_name()
 
 # from module_name import fun, var as alias_name,class, method as alias_name
- # how to access methods, functions, class and variable
+# how to access methods, functions, class and variable
 # you can access function names directly by alias_name
 # alias_name()
 #
@@ -66,3 +66,14 @@
 #  fun_name()
 #  method_name()
 
+
+# module search path
+# when a module cal is imported, the intepreter first searches for a built-in module with that name. if not found then it searches for a file named cal.py in a list of directories given by variable sys.path
+# sys.path is initialized from these location
+
+# current directory
+# if not forund then searches each directories in the shell variable PYTHONPATH
+# if not found then searchs installation dependent default path
+# PYTHONPATH is a list of  directory names with the same name syntax, as the shell variable PATH
+
+# module manages file and packages manages folders
