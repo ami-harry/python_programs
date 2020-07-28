@@ -1,7 +1,7 @@
 # tech package--> work module
 # we are importing the User pack inside the Tech package and using the module of User package in this tech package
 #
-from User import profile
+# from User import profile
 
 
 def tech_work():
@@ -10,7 +10,7 @@ def tech_work():
     print()
 
 
-profile.user_profile()
+# profile.user_profile()
 
 # we cant run this in the same directry or using python3 filname.py
 # we have to go to main folder then by using  flag method we have to run this file

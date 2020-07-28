@@ -262,4 +262,15 @@
 # by giving aliasing name we can access both or by using sepearte importing and accessing the module using its package name as well
 
 
+#
+#
+#
+#
+#
+#
+# here we are using profile module of User package,, it will use module of Tech profile also becuase we have imported that sibling concept in that file., so using that file in this file will make access of both file here.
+#
+from User import profile
+profile.user_profile()
 
+# to run this..normally type python3 filename.py
