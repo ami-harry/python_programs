@@ -87,3 +87,8 @@ print(st.tm_year, end='  ')
 print(st.tm_hour, end=':')
 print(st.tm_min, end=':')
 print(st.tm_sec)
+print(st.tm_zone)
+print(st.tm_gmtoff)  # this will show the original time of UNIX
+print(ctime(st.tm_gmtoff))  # this will show the original time of UNIX
+a = 234567894576  # a random num suppose as seconds
+print(ctime(a))  # it will convert in into a readable format
