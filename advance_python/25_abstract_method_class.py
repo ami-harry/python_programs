@@ -1,3 +1,7 @@
+#  A conrete method is a method that's not abstract
+# A instance method is a method that's not static
+# therefore all static methods are concrete but are not instance method
+
 # Abstract class
 # a class derived from ABC class which belongs to abc module is known as abstract class in python
 # ABC class is known as Mets class which means a class that defines the behaviour of other class. so we can say Meta class ABC defines that the class which is derived from it becomes an abstract class
@@ -141,7 +145,6 @@ c = Child('hariom')
 
 # make a perfect example of abstract class and method
 
-from abc import ABC, abstractmethod
 
 class DefenceForce(ABC):
     def __init__(self):
@@ -149,26 +152,28 @@ class DefenceForce(ABC):
 
     @abstractmethod
     def area(self):
-        pass #we will define the area in its childs class
-    
+        pass  # we will define the area in its childs class
+
     def gun(self):
         print("Gun=AK47")
 
-    
+
 class Army(DefenceForce):
     def __init__(self):
         print("this is army constructor")
         super().__init__()
-        print(self.val) #calling the value of parent constructor
+        print(self.val)  # calling the value of parent constructor
     # defining the abstract method here
+
     def area(self):
         print("this is army abstract method definition")
         print("Area=Land")
 
+
 class AirForce(DefenceForce):
     def __init__(self):
         print("this is airforce constructor")
-        super().__init__()#calling the value of parent constructor
+        super().__init__()  # calling the value of parent constructor
         print(self.val)
 
     # defining the abstract method here
@@ -180,22 +185,22 @@ class AirForce(DefenceForce):
 class Navy(DefenceForce):
     def __init__(self):
         print("this is navy constructor")
-        super().__init__()#calling the value of parent constructor
+        super().__init__()  # calling the value of parent constructor
         print(self.val)
     # defining the abstract method here
+
     def area(self):
         print("this is navy abstract method definition")
         print("Area=Sea")
 
 
-
 # creating childs objct and calling the abstract method
 
-a=Army() #here the constructor will be called
+a = Army()  # here the constructor will be called
 print()
-af=AirForce() #here the constructor will be called
+af = AirForce()  # here the constructor will be called
 print()
-n=Navy() #here the constructor will be called
+n = Navy()  # here the constructor will be called
 print()
 # printing or accessing abstract method
 a.area()
