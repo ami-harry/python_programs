@@ -6,7 +6,17 @@ from threading import Thread
 
 
 class ChildClasName(Thread):
-    statements
+    statementsclass MyThread(Thread):
+    def run(self):
+        for i in range(10):
+            print("run method")
+
+
+ob = MyThread()
+print(ob.name)
+ob.start()
+for i in range(5):
+    print("main thread")
 
 
 thread_object = ChildClasName()
