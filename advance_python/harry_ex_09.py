@@ -40,6 +40,7 @@ class Train:
     def __init__(self, avl_seat):
         self.seat_available = avl_seat
         self.rlock = RLock()
+        print()
 
     def reservation(self, tic_req):
         self.rlock.acquire()
@@ -47,14 +48,19 @@ class Train:
         print("available ticktes", self.seat_available)
         if(self.seat_available >= tic_req):
             usr_name = currentThread().name
-            print(f"{tic_req} is booked for {usr_name}")
+            print(f"{tic_req} is booked for {usr_name}\n")
             self.seat_available -= tic_req
         else:
-            print("No seat available")
+
+            usr_name = currentThread().name
+            print(f"sorry mr.{usr_name}, we have only", self.seat_available,
+                  " seats avialable and you have demanded for ", tic_req, " seats . we cant book your tickets\n")
+
         self.rlock.release()
-        print(self.rlock)
+        print(self.rlock, '\n')
 
 
+total_seat = int(input("Total seats?:"))
 usr1 = input("Enter your name:")
 seat_for_usr1 = int(input("Enter how many seats  you want: "))
 usr2 = input("Enter your name:")
@@ -62,7 +68,7 @@ seat_for_usr2 = int(input("Enter how many seats  you want: "))
 usr3 = input("Enter your name:")
 seat_for_usr3 = int(input("Enter how many seats  you want: "))
 
-t = Train(5)
+t = Train(total_seat)
 pas1 = Thread(target=t.reservation, args=(seat_for_usr1,), name=usr1)
 pas2 = Thread(target=t.reservation, args=(seat_for_usr2,), name=usr2)
 pas3 = Thread(target=t.reservation, args=(seat_for_usr3,), name=usr3)
@@ -73,4 +79,4 @@ pas3.start()
 pas1.join()
 pas2.join()
 pas3.join()
-print("this is main thread")
+print("Thanks for using this ticket booking system")
