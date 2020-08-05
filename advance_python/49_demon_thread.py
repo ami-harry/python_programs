@@ -1,4 +1,5 @@
 from threading import currentThread, Thread
+from time import sleep
 # Daemon Thread
 # a daemon thread is a thread which runs continuosly in the background. it provides support to non-daemon threads
 
@@ -73,7 +74,6 @@ t1 = Thread(target=disp)
 print('t1:', t1.isDaemon())
 # here main thread is the  child of t1 thread so it will also be a non-daemon thread
 
-'''
 # b.2   if parent thread is daemon then child thread will become daemon thread
 
 
@@ -97,3 +97,19 @@ t1.daemon = True
 print('t1 after:', t1.isDaemon())
 t1.start()
 t1.join()
+
+'''
+# c. when last non daemon thread terminates, automatically all daemon threads will be terminated , we are not required to terminate daemon thread explicitly
+
+
+def teacher():
+    for i in range(1, 10):
+        print("Teaching session", i)
+        sleep(1)
+
+
+t1 = Thread(target=teacher)
+t1.daemon = True
+t1.start()
+sleep(7)
+print("Exam finished\n", currentThread().name)
