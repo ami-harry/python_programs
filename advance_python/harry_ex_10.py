@@ -1,3 +1,8 @@
+
+# thread communication
+# connecting two threads
+# one thread will wait for another to execute then after the second will execute
+
 from threading import Thread, Event
 from time import sleep
 
