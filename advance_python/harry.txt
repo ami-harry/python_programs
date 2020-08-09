@@ -1,3 +1,6 @@
-Hello 
-Harry 
-How are you 
+
+This is appending through a+ mode
+ is added through if methodThis line is added through if method
+ hello harry, this line is adding
+ hello harry, this line is adding
+This is appending through a+ mode
